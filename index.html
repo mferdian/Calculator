@@ -1,97 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Calculatoor</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link href="./src/output.css" rel="stylesheet">
+
 </head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-<body>
-        <div class="wrapper">
-            <div class="section-div">
-            <section class="screen">
-                0
-            </section>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link href="./src/output.css" rel="stylesheet">
+  <style>
+    .calc-button {
+      transition: all 0.2s ease;
+    }
+    .calc-button:hover {
+      filter: brightness(90%);
+      transform: translateY(-1px);
+    }
+    .calc-button:active {
+      transform: translateY(1px);
+    }
+    #screen {
+      min-height: 64px;
+      word-wrap: break-word;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-            <section class="calc-button-upper">
-                <div class="calc-button-row">
-                    <button class="calc-button double">
-                        C
-                    </button>
-                    <button class="calc-button">
-                        &larr;
-                    </button>
-                    <button class="calc-button">
-                        &divide;
-                    </button>
-                </div>
+  <div class="bg-white p-4 rounded-xl shadow-lg w-80">
+    <div id="screen" class="bg-gray-800 text-white text-right text-3xl p-4 rounded mb-4 font-mono">
+      0
+    </div>
 
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-2">
+      <button value="C" class="calc-button col-span-2 bg-red-500 hover:bg-red-600 text-white py-4 rounded-lg font-bold">C</button>
+      <button value="back" class="calc-button bg-yellow-400 hover:bg-yellow-500 py-4 rounded-lg font-bold">←</button>
+      <button value="/" class="calc-button bg-blue-500 hover:bg-blue-600 text-white py-4 rounded-lg font-bold">/</button>
 
-                <div class="calc-button-row">
-                    <button class="calc-button">
-                        7
-                    </button>
-                    <button class="calc-button">
-                        8
-                    </button>
-                    <button class="calc-button">
-                        9
-                    </button>
-                    <button class="calc-button">
-                        &times;
-                    </button>
-                </div>
+      <button value="7" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">7</button>
+      <button value="8" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">8</button>
+      <button value="9" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">9</button>
+      <button value="*" class="calc-button bg-blue-500 hover:bg-blue-600 text-white py-4 rounded-lg font-bold">×</button>
 
-                <div class="calc-button-row">
-                    <button class="calc-button">
-                        4
-                    </button>
-                    <button class="calc-button">
-                        5
-                    </button>
-                    <button class="calc-button">
-                        6
-                    </button>
-                    <button class="calc-button">
-                        &minus;
-                    </button>
+      <button value="4" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">4</button>
+      <button value="5" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">5</button>
+      <button value="6" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">6</button>
+      <button value="-" class="calc-button bg-blue-500 hover:bg-blue-600 text-white py-4 rounded-lg font-bold">−</button>
 
-                </div>
+      <button value="1" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">1</button>
+      <button value="2" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">2</button>
+      <button value="3" class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">3</button>
+      <button value="+" class="calc-button bg-blue-500 hover:bg-blue-600 text-white py-4 rounded-lg font-bold">+</button>
 
-                <div class="calc-button-row">
-                    <button class="calc-button">
-                        1
-                    </button>
-                    <button class="calc-button">
-                        2
-                    </button>
-                    <button class="calc-button">
-                        3
-                    </button>
-                    <button class="calc-button">
-                        &plus;
-                    </button>
-                </div>
+      <button value="0" class="calc-button col-span-2 bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">0</button>
+      <button value="." class="calc-button bg-gray-200 hover:bg-gray-300 py-4 rounded-lg font-bold">.</button>
+      <button value="=" class="calc-button bg-green-500 hover:bg-green-600 text-white py-4 rounded-lg font-bold">=</button>
+    </div>
+  </div>
 
-                <div class="calc-button-row">
-                    <button class="calc-button triple1">
-                        0
-                    </button>
-                    <button class="calc-button triple">
-                        &equals;
-                    </button>
-
-                </div>
-
-
-            </section>
-        </div>
-
-
-
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
